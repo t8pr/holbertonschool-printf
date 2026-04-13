@@ -1,16 +1,15 @@
 #include "main.h"
 
 /**
- * _printf - prints anything
- * @format: list of argument types passed to the function
+ * _printf - produces output according to a format
+ * @format: character string containing directives
  *
- * Return: number of characters printed
+ * Return: the number of characters printed
  */
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int count = 0;
-	int i = 0;
+	int count = 0, i = 0;
 
 	if (format == NULL)
 		return (-1);
