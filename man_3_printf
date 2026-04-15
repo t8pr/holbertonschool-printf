@@ -1,0 +1,10 @@
+.TH _PRINTF 3 "APRIL 2026" "Holberton School" "Custom Printf Manual"
+.SH NAME
+_printf \- formatted output conversion
+.SH SYNOPSIS
+.B #include "main.h"
+.sp
+.B int _printf(const char *format, ...);
+.SH DESCRIPTION
+The \fB_printf\fP() function produces output according to a \fIformat\fP.
+It writes output to \fBstdout\fP, the standard output stream.
