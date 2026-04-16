@@ -7,6 +7,8 @@ Currently, `_printf` handles the following conversion specifiers:
 * `%c`: Characters
 * `%s`: Strings
 * `%%`: Percent signs
+* `%d`: Signed decimal integers
+* `%i`: Signed decimal integers
 
 ## How to Compile
 You can compile the code using:
@@ -15,7 +17,8 @@ You can compile the code using:
 ## Files
 * `_printf.c`: The main function logic.
 * `main.h`: The header file with all prototypes.
-* `utils.c`: Helper functions for printing.
+* `utils.c`: Helper functions for printing strings and characters.
+* `print_number.c`: Helper function for printing integers and handling negative numbers.
 
 ## Authors
 Created by: [Osama Alhamdan, Aseel Alzhrani]

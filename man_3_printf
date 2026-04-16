@@ -8,3 +8,27 @@ _printf \- formatted output conversion
 .SH DESCRIPTION
 The \fB_printf\fP() function produces output according to a \fIformat\fP.
 It writes output to \fBstdout\fP, the standard output stream.
+.PP
+This function writes output under the control of a \fIformat\fP string that specifies how subsequent arguments are converted for output. The format string is composed of zero or more directives: ordinary characters (not \fB%\fP), which are copied unchanged to the output stream; and conversion specifications, each of which results in fetching zero or more subsequent arguments.
+.PP
+If a conversion specification is invalid or not supported, the \fB%\fP character and the unrecognized character are both printed exactly as they appear in the format string.
+.SS Conversion specifiers
+A character that specifies the type of conversion to be applied. The conversion specifiers and their meanings are:
+.TP
+.B d, i
+The \fBint\fP argument is converted to signed decimal notation. If the value is negative, a '\-' is printed first.
+.TP
+.B c
+The \fBint\fP argument is converted to an \fBunsigned char\fP, and the resulting character is written.
+.TP
+.B s
+The \fBchar *\fP argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to (but not including) a terminating null byte. If the pointer is NULL, it prints exactly "(null)".
+.TP
+.B %
+A literal \fB%\fP is written. No argument is converted. The complete conversion specification is \fB%%\fP.
+.SH RETURN VALUE
+Upon successful return, the \fB_printf\fP() function returns the number of characters printed.
+.PP
+If the \fIformat\fP string is NULL, or if the format string ends abruptly after a \fB%\fP character, the function returns \-1.
+.SH AUTHORS
+Created by Osama Alhamdan and Aseel Alzhrani.
